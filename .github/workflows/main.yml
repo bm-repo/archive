@@ -27,3 +27,4 @@ jobs:
           repository: ${{github.repository}}
           ref: main
           token: ${{secrets.GITHUB_TOKEN}}
+      - run: ls -a

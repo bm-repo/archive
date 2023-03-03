@@ -18,13 +18,11 @@ jobs:
     runs-on: ubuntu-latest
     # Steps represent a sequence of tasks that will be executed as part of the job
     steps:
-      - run: echo bm-repo/busy-here
-      - run: echo ${{secrets.GITHUB_TOKEN}}
       - name: checkout the code
         uses: actions/checkout@v3.3.0
         with:
           # Repository name with owner. For example, actions/checkout
-          repository: ${{github.repository}}
+          repository: bm-repo/busy-here
           ref: main
           token: ${{secrets.GITHUB_TOKEN}}
       - run: ls -a
